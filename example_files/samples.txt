@@ -1,0 +1,7 @@
+sample group
+group01_sample01 group01
+group01_sample02 group01
+group01_sample03 group01
+group02_sample01 group02
+group02_sample02 group02 
+group02_sample03 group02

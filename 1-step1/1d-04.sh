@@ -5,7 +5,7 @@
 #DEGoldS is available for free download from the GitHub
 #software repository (https://github.com/GGFHF/DEGoldS) under GNU
 #General Public License v3.0.
-#This software has been developed in memoriam of Dr. Pablo Goikoetxea
+#This software has been developed in memoriam of Dr. Pablo G. Goicoechea
 #who initiated this research along with researchers from NEIKER,
 #Departamento de Sistemas y Recursos Naturales (Universidad Politécnica
 #de Madrid) and Universidad del País Vasco (UPV/EHU).
@@ -13,7 +13,7 @@
 
 #VARIABLES INSTRUCTIONS
 #WD: Working directory
-#GMAP_ALIGNMENT_FILE: (alignment.log in 1d-02)
+#GMAP_ALIGNMENT_FILE: (alignment.aln in 1d-02)
 #NGSHELPER_DIR: NGSHelper directory
 
 #VARIABLES DEFINITION

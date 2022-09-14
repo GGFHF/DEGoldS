@@ -5,7 +5,7 @@
 #DEGoldS is available for free download from the GitHub
 #software repository (https://github.com/GGFHF/DEGoldS) under GNU
 #General Public License v3.0.
-#This software has been developed in memoriam of Dr. Pablo Goikoetxea
+#This software has been developed in memoriam of Dr. Pablo G. Goicoechea
 #who initiated this research along with researchers from NEIKER,
 #Departamento de Sistemas y Recursos Naturales (Universidad Politécnica
 #de Madrid) and Universidad del País Vasco (UPV/EHU).
@@ -13,6 +13,8 @@
 
 #VARIABLES INSTRUCTIONS
 #WD: Working directory
+#NCPU: number of CPUs
+#LINEAGE_DATASET: specify the name of the BUSCO lineage to be used (BUSCO MANUAL --lineage_dataset option)
 #TRANSCRIPTOME_FILE_PATH: by length filtered transcriptome FASTA file path
 #CONDA_DIR: Conda directory
 #BUSCO_ENV: BUSCO environment in Conda
@@ -20,6 +22,8 @@
 #VARIABLES DEFINITION
 WD=""
 
+NCPU=
+LINEAGE_DATASET=""
 TRANSCRIPTOME_FILE_PATH=""
 
 CONDA_DIR=""
@@ -40,8 +44,8 @@ source activate "$BUSCO_ENV"
 cd "$WD"
 
 busco \
-	--cpu=5 \
-	--lineage_dataset=embryophyta_odb10 \
+	--cpu="$NCPU" \
+	--lineage_dataset="$LINEAGE_DATASET" \
 	--mode=tran \
 	--evalue=1E-03 \
 	--limit=3 \

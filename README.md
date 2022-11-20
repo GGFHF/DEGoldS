@@ -99,35 +99,35 @@ _R scripts (.R files)_
 The following R packages are necessary to run R scripts (.R files).
 All scripts have been tested in R version 4.
 
--_DESeq2_
+- _DESeq2_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("DESeq2")
 
--_edgeR_
+- _edgeR_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("edgeR")
 
--_Tximport_
+- _Tximport_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("tximport")
 
--_readr_
+- _readr_
 
     install.packages("readr")
 
--_IHW_
+- _IHW_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("IHW")
 
--_Apeglm_
+- _Apeglm_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")

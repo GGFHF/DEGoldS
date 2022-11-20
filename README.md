@@ -101,37 +101,37 @@ All scripts have been tested in R version 4.
 
 - _DESeq2_
 
-    if (!require("BiocManager", quietly = TRUE))
-        install.packages("BiocManager")
-    BiocManager::install("DESeq2")
+        if (!require("BiocManager", quietly = TRUE))
+            install.packages("BiocManager")
+        BiocManager::install("DESeq2")
 
 - _edgeR_
 
-    if (!require("BiocManager", quietly = TRUE))
-        install.packages("BiocManager")
-    BiocManager::install("edgeR")
+        if (!require("BiocManager", quietly = TRUE))
+            install.packages("BiocManager")
+        BiocManager::install("edgeR")
 
 - _Tximport_
 
-    if (!require("BiocManager", quietly = TRUE))
-        install.packages("BiocManager")
-    BiocManager::install("tximport")
+        if (!require("BiocManager", quietly = TRUE))
+            install.packages("BiocManager")
+        BiocManager::install("tximport")
 
 - _readr_
 
-    install.packages("readr")
+        install.packages("readr")
 
 - _IHW_
 
-    if (!require("BiocManager", quietly = TRUE))
-        install.packages("BiocManager")
-    BiocManager::install("IHW")
+        if (!require("BiocManager", quietly = TRUE))
+            install.packages("BiocManager")
+        BiocManager::install("IHW")
 
 - _Apeglm_
 
-    if (!require("BiocManager", quietly = TRUE))
-        install.packages("BiocManager")
-    BiocManager::install("apeglm")
+        if (!require("BiocManager", quietly = TRUE))
+            install.packages("BiocManager")
+        BiocManager::install("apeglm")
 
 ### WORKFLOW PROCEDURE
 

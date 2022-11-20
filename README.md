@@ -1,4 +1,4 @@
-#DEGoldS
+# DEGoldS
 
 DEGoldS (Differential Expression analysis pipelines benchmarking
 workflow based on Gold Standard construction) is a workflow to test
@@ -11,7 +11,7 @@ workflow description and using instructions. You can also refer to the
 pre-print manuscript doi: https://doi.org/10.1101/2022.09.13.507753
 
 
-###DISCLAIMER
+### DISCLAIMER
 
 DEGoldS is available for free download from the GitHub
 software repository (https://github.com/GGFHF/DEGoldS) under GNU
@@ -22,7 +22,7 @@ Departamento de Sistemas y Recursos Naturales (Universidad Politécnica
 de Madrid) and Universidad del País Vasco (UPV/EHU).
 
 
-###INSTALLATION INSTRUCTIONS
+### INSTALLATION INSTRUCTIONS
 
 _Miniconda3_
 
@@ -99,43 +99,43 @@ _R scripts (.R files)_
 The following R packages are necessary to run R scripts (.R files).
 All scripts have been tested in R version 4.
 
-_DESeq2_
+-_DESeq2_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("DESeq2")
 
-_edgeR_
+-_edgeR_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("edgeR")
 
-_Tximport_
+-_Tximport_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("tximport")
 
-_readr_
+-_readr_
 
     install.packages("readr")
 
-_IHW_
+-_IHW_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("IHW")
 
-_Apeglm_
+-_Apeglm_
 
     if (!require("BiocManager", quietly = TRUE))
         install.packages("BiocManager")
     BiocManager::install("apeglm")
 
-###WORKFLOW PROCEDURE
+### WORKFLOW PROCEDURE
 
-_General description__
+_General description_
 
 DEGoldS (Differential Expression analysis pipelines benchmarking
 workflow based on Gold-Standard construction) is divided into 4 main

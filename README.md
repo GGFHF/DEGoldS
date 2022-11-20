@@ -1,4 +1,4 @@
-# DEGoldS
+#DEGoldS
 
 DEGoldS (Differential Expression analysis pipelines benchmarking
 workflow based on Gold Standard construction) is a workflow to test
@@ -11,7 +11,8 @@ workflow description and using instructions. You can also refer to the
 pre-print manuscript doi: https://doi.org/10.1101/2022.09.13.507753
 
 
-DISCLAIMER
+###DISCLAIMER
+
 DEGoldS is available for free download from the GitHub
 software repository (https://github.com/GGFHF/DEGoldS) under GNU
 General Public License v3.0.
@@ -21,59 +22,70 @@ Departamento de Sistemas y Recursos Naturales (Universidad Politécnica
 de Madrid) and Universidad del País Vasco (UPV/EHU).
 
 
-INSTALLATION INSTRUCTIONS
-Miniconda3
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY (where you will install Miniconda3) 
-$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
-$ chmod u+x Miniconda3-latest-Linux-x86_64.sh 
-$ ./Miniconda3-latest-Linux-x86_64.sh -b -p /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3 
-$ rm Miniconda3-latest-Linux-x86_64.sh 
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin 
-$ ./conda config --add channels defaults 
-$ ./conda config --add channels conda-forge 
-$ ./conda config --add channels r 
-$ ./conda config --add channels bioconda 
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin 
-$ ./conda install --yes --name base mamba
+###INSTALLATION INSTRUCTIONS
 
-FastQC (Bioconda installation)
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
-$ ./mamba create --yes --name fastqc fastqc
+_Miniconda3_
 
-Trinity (Bioconda installation)
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
-$ ./mamba create --yes --name trinity trinity
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY (where you will install Miniconda3) 
+    $ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh 
+    $ chmod u+x Miniconda3-latest-Linux-x86_64.sh 
+    $ ./Miniconda3-latest-Linux-x86_64.sh -b -p /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3 
+    $ rm Miniconda3-latest-Linux-x86_64.sh 
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin 
+    $ ./conda config --add channels defaults 
+    $ ./conda config --add channels conda-forge 
+    $ ./conda config --add channels r 
+    $ ./conda config --add channels bioconda 
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin 
+    $ ./conda install --yes --name base mamba
 
-BUSCO (Bioconda installation)
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
-$ ./mamba create --yes --name busco busco
+_FastQC (Bioconda installation)_
 
-QUAST (Bioconda installation)
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
-$ ./mamba create --yes --name quast quast
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
+    $ ./mamba create --yes --name fastqc fastqc
 
-GMAP (Bioconda installation)
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
-$ ./mamba create --yes --name gmap gmap
+_Trinity (Bioconda installation)_
 
-Bowtie2 (Bioconda installation)
-$ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
-$ ./mamba create --yes --name bowtie2 bowtie2
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
+    $ ./mamba create --yes --name trinity trinity
 
-NGShelper
+_BUSCO (Bioconda installation)_
+
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
+    $ ./mamba create --yes --name busco busco
+
+_QUAST (Bioconda installation)_
+
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
+    $ ./mamba create --yes --name quast quast
+
+_GMAP (Bioconda installation)_
+
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
+    $ ./mamba create --yes --name gmap gmap
+
+_Bowtie2 (Bioconda installation)_
+
+    $ cd /PATH_TO_YOUR_APPS_DIRECTORY/Miniconda3/bin
+    $ ./mamba create --yes --name bowtie2 bowtie2
+
+_NGShelper_
+
 Installation instruction in https://github.com/GGFHF/NGShelper. These
  instructions don´t make NGShelper available from PATH variable.
  However, this is not necessary as software directory has to be
- specified in NGSHELPER_DIR variable in the scripts.
+     specified in NGSHELPER_DIR variable in the scripts.
 
-RSEM
+_RSEM_
+
 Although RSEM can be installed also from Bioconda repositories, issues
 regarding to reads simulations have been experienced. For this reason,
 installation from source code is suggested (instruction in
 https://github.com/deweylab/RSEM).These instructions make RSEM
 available from PATH variable, necessary to run the scripts as they are.
 
-GffCompare
+_GffCompare_
+
 Although GffCompare can be installed also from Bioconda repositories
 some issues have been experienced when running. For this reason,
 installation from source code is suggested (instruction in
@@ -82,40 +94,49 @@ GffCompare available from PATH variable. However, this is not necessary
 as software directory has to be specified in GFFCOMPARE_DIR variable in
 the scripts.
 
-R scripts (.R files)
+_R scripts (.R files)_
+
 The following R packages are necessary to run R scripts (.R files).
 All scripts have been tested in R version 4.
-DESeq2
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("DESeq2")
 
-edgeR
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("edgeR")
+_DESeq2_
 
-Tximport
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("tximport")
+    if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+    BiocManager::install("DESeq2")
 
-readr
-install.packages("readr")
+_edgeR_
 
-IHW
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("IHW")
+    if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+    BiocManager::install("edgeR")
 
-Apeglm
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("apeglm")
+_Tximport_
 
-WORKFLOW PROCEDURE
+    if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+    BiocManager::install("tximport")
 
-General description
+_readr_
+
+    install.packages("readr")
+
+_IHW_
+
+    if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+    BiocManager::install("IHW")
+
+_Apeglm_
+
+    if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+    BiocManager::install("apeglm")
+
+###WORKFLOW PROCEDURE
+
+_General description__
+
 DEGoldS (Differential Expression analysis pipelines benchmarking
 workflow based on Gold-Standard construction) is divided into 4 main
 steps which are divided at the same time into different substeps
@@ -144,7 +165,8 @@ modules, however "B" module is only used before "D" module. "B" module
 together with 2b-D01, 2b-D02, 2b-D03 and 2b-D04 helps to get a reliable
 gold-standard. 
 
-Gold-standard construction
+_Gold-standard construction_
+
 The gold-standard is built from differential gene expression analysis
 (scripts 2d) of the count values taken from script 2c-01. At this point
 the gold-standard is called “simulation gold-standard” (simGS) because
@@ -181,7 +203,8 @@ not be usual but in case this happens user should decide how to proceed
 with benchmarking process. One solution could be to consider all the
 possible genes but counting +1TP (True Positive) in the scoring process.
 
-Scripts considerations
+_Scripts considerations_
+
 The scripts have to be only modified in the section
 "Variables definition" with the required strings provided. The strings
 should be placed between quotes (“”). Usually strings are characters
@@ -189,10 +212,5 @@ strings, but if specified in instructions a number should be placed.
 If there are no quotes it means a number should be placed. Explanation
 of every variable can be seen in section 5 (variables instructions) as
 well as in the upper part of every script.
-
-
-
-
-
 
 
